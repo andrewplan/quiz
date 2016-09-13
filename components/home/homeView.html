@@ -1,16 +1,23 @@
 <div class="homeview-wrapper">
     <div class="homeview-choose-a-quiz">
         <h2 class="homeview-choose-a-quiz-text">Choose a quiz!</h2>
-        <h3 class="homeview-choose-a-quiz-angular-text">ANGULAR</h3>
-        <h3 class="homeview-choose-a-quiz-HTML-text">HTML</h3>
+        <div ng-repeat="item in quizzes">
+          <a ui-sref="quiz.view( {quizName: item.name} )">
+              <h3 class="homeview-choose-a-quiz-quiztype-text">
+                {{item.name}}
+              </h3>
+          </a>
+        </div>
     </div>
     <div class="homeview-view-past-quizzes">
         <h2 class="homeview-view-past-quizzes-text">View Past Quizzes</h2>
-        <h4 class="homeview-view-past-quizzes-angular-text">ANGULAR</h4>
-            <p class="homeview-view-past-quizzes-quiz-link">20151208163252</p>
-        <h4 class="homeview-view-past-quizzes-HTML-text">HTML</h4>
-            <p class="homeview-view-past-quizzes-quiz-link">20160205140502</p>
-            <p class="homeview-view-past-quizzes-quiz-link">20160205140515</p>
+        <h4
+          class="homeview-view-past-quizzes-quiz-type-header"
+          ng-repeat="quiz in quizzes"
+        >
+          {{ quiz.name }}
+        </h4>
+            <p class="homeview-view-past-quizzes-quiz-link"></p>
     </div>
 
 </div>

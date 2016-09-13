@@ -45,15 +45,13 @@ header a {
   color: #FEFEFE;
 }
 
-.homeview-choose-a-quiz-angular-text {
+.homeview-choose-a-quiz-quiztype-text {
   letter-spacing: 1px;
   margin: 30px 0 0 0;
   color: #FFD540;
 }
 
-.homeview-choose-a-quiz-HTML-text {
-  letter-spacing: 1px;
-  margin: 7px 0 0 0;
+.homeview-choose-a-quiz-quiztype-text:hover {
   color: #00BFFF;
 }
 
@@ -73,7 +71,7 @@ header a {
   margin-top: 60px;
 }
 
-.homeview-view-past-quizzes-angular-text, .homeview-view-past-quizzes-HTML-text {
+.homeview-view-past-quizzes-quiz-type-header {
   margin: 10px 0 0 0;
   font-size: 14px;
   letter-spacing: 0.5px;

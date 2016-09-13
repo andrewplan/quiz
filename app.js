@@ -14,9 +14,15 @@ angular.module( 'quizApp', [ 'ui.router' ] )
           }
       } )
       .state( 'quiz', {
-        url: '/quiz'
+        url: '/quiz/:quizName'
         , templateUrl: './components/quiz/views/quizContainerView.html'
         , controller: 'quizCtrl'
+        , resolve: {
+                      questions: function( quizService, $stateParams ) {
+                        var name = $stateParams.quizName;
+                        return quizService.getQuestions( name );
+                      }
+        }
       } )
       .state( 'results', {
         url: '/results'
